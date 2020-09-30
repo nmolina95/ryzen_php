@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d92a2a2802.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styleProductOld.css">
+    <title>RYZEN | <%= producto.name %></title>
+</head>
+<body>
+    <!-- Header -->
+    <%- include('partials/headerNavbar') %>
+    <%- include('partials/mobileNavBar') %>
+    <!-- /Header -->
+    
+    <div class="container col-xl-11 producto">
+        <div class="row productoUnico">
+            <div class="col-12 divProductoUnico">
+                <section class="prodArticulo col-12">
+                    <div class="product-container col-12">
+                        <!-- <% if (producto.idCategory == '1' || producto.idCategory == '2') { %>
+                        <div class="block-container">
+                            <div class="block"><img src="/img/visor1.jpg" class="extra1" alt="imagen" srcset=""></div>
+                            <div class="block"><img src="/img/visor3.webp" alt="imagen" srcset=""></div>
+                            <div class="block"><img src="/img/visor4.jpg" alt="imagen" srcset=""></div>
+                        </div>             
+                        <%} %> -->
+                        <div class="col-12 col-lg-6 imageDiv">
+                            <figure class="imagenProducto">
+                                <img src="/img/products/<%= producto.img %>" id='myImg' class="productImg" alt='imagen de producto'>
+                                <div id="myModal" class="modal">
+                                    <img src="/img/products/<%= producto.img %>" class="modal-content" id="img01">
+                                </div>
+                            </figure>
+                        </div>
+                        <article class="datos col-xl-4 col-lg-4 col-12">
+                            <div class="datosProducto">
+                                <h2 class="nombre" name="name"><%= producto.name %></h2>
+                                <p style="font-size: 1.8rem;"><%= producto.brand %></p>
+                                <% if (producto.idCategory == '1' || producto.idCategory == '2') { %>
+                                <div class="copy-container">
+                                    <span>10%OFF</span>
+                                    <span>Envío gratuito</span>
+                                </div>
+                                <%} else { %>
+                                <br>
+                                <%} %>
+                            </div>
+                            <!-- <div class="containerCantidadProducto">
+                                <div class="cantidad">
+                                    <i class="enCantidad fas fa-minus"></i>
+                                    <p class="enCantidad">CANTIDAD: 1</p>
+                                    <i class="fas fa-plus enCantidad"></i>
+                                </div>
+                            </div> -->
+                            <form action="/carrito/agregar" method="POST" enctype="application/x-www-form-urlencoded">
+                                <div class="containerCantidadProducto">
+                                    <% if (producto.price !== '0') { %>
+                                    <div class="cantidad">
+                                        <label class="quantity" for="quantity">Cantidad:</label>
+                                        <input type="number" name="quantity" id="quantity" value="1">
+                                    </div>
+                                    <%} else { %>
+                                        <br> 
+                                    <%} %>
+                                </div>
+                                <div class="botones">
+                                    <% if (producto.price == 0) { %>
+                                    <h2 class="precio" style="color:green; font-size: 3rem; margin: 10px 0px;">Gratis</h2>
+                                    <% } else { %>
+                                    <p class="precio">$<%= toThousand(producto.price) %></p>
+                                    <%}%>
+                                    <div class="buttonsDiv">
+                                        <% if (locals.user.rol == 10) { %>
+                                        <a href="/productos/editar/<%= producto.id %>"><button type="button" class="btn btn-outline-success btn-lg editButton">Editar</button></a>
+                                        <input type="hidden" name="productId" value="<%= producto.id %>">
+                                        <% } %>
+                                        <button type="submit" class="btn btn-outline-warning btn-lg cartButton">Agregar al carrito</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </article>
+                    </div>
+                    <% if (producto.idCategory == 1 || producto.idCategory == 2 ) { %>
+                    <div class="container  col-12 col-xl-11 col-lg-11 especificaciones">
+                        <div class="row col-xl-11 col-lg-11 col-12">
+                            <div class="especificacionesTecnicas col-12 col-lg-11 col-xl-11">
+                                <div class="titulosEspecificaciones col-12">
+                                    <ul>
+                                        <li id="specsA">Especificaciones</li>
+                                        <li id="manualA">Manuales</li>
+                                        <li>F.A.Q</li>
+                                    </ul>
+                                </div>
+                                <div class="especificacionesDetalles col-12" id="especificacionesDetalles">
+                                    <ul>
+                                        <% ((producto.description).split('.')).map(e => { %>
+                                            <li><%= e %></li>
+                                        <% }) %>
+                                    </ul>
+                                </div>
+                                <div class="manuals col-12" id="manuals">
+                                    <p>Manual de <%= producto.name %>: <a href="https://scontent.faep5-1.fna.fbcdn.net/v/t39.2365-6/61306535_427847951112840_7744020880174350336_n.pdf?_nc_cat=104&_nc_sid=ad8a9d&_nc_ohc=4ab42dTolykAX-swcB0&_nc_ht=scontent.faep5-1.fna&oh=6be79bc250f2c8802a153d3d29a9a31a&oe=5F45A6C8">LINK</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="container col-xl-11 col-12 moreInfo">
+        <div class="row rowMoreInfo col-12">
+            <div class="col-12 moreInfo-box">
+                <section class="moreInfo-description">
+                    <div class="infoContainer">
+                        <div class="infoPrimera col-lg-7">
+                            <h3 class="infoTitulo"><%= producto.title %></h3>
+                            <p class="infoDescripcion"><%= producto.secDescription %></p>
+                        </div>
+                        <div class="infoImagen col-12 col-md-10 col-lg-5 col-xl-5">
+                            <img src="<%= producto.secImg %>" alt="Info imagen" srcset="">
+                        </div>
+                    </div>
+                    <div class="moreInfoContainer">
+                        <div class="infoImagenSegunda col-12 col-md-10 col-lg-5 col-xl-5">
+                            <img src="<%= producto.thirdImg %>" alt="Info imagen 2" srcset="">
+                        </div>
+                        <div class="infoSegunda col-lg-7">
+                            <h4 class="infoTitulo"><%= producto.secTitle %></h4>
+                            <p class="subInfoDescripcion"><%= producto.thirdDescription %></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="container video">
+                <div class="row rowVideo col-12">
+                    <div class="col-12 contenedorVideo">
+                        <div class="youtubeContainer col-12 col-lg-8 col-xl-8">
+                        <iframe class="youtubeVideo" width="560" height="315" src="<%= producto.video %>" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="accion col-4">
+                            <h3>Descubrilo en <span class="rojo"><br>ACCIÓN</span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    <%- include('partials/footer') %>
+    <!-- /Footer-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="/js/productJs.js"></script>
+    <script src="/js/search.js"></script>
+</body>
+</html>

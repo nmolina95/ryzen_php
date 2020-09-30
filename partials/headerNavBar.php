@@ -1,0 +1,56 @@
+<?php
+
+ echo "<header class='desktop-header' id='hero'>
+    <div class='container col-xl-11 cabecera'>
+        <nav class='row navbar navegacion navbar-dark' >
+            
+            <span class='logo'>
+                <p style='margin-bottom: 0;'><a href='/'>RYZEN</a></p>
+            </span>
+            <ul style='margin-bottom: 0;'>
+                <li class='nav-item active'><a href='/productos/visores'>VISORES</a></li>
+                <li class='nav-item'><a href='/productos/aplicaciones'>APPS Y JUEGOS</a></li>
+                <li class='nav-item'><a href='/quienes-somos'>QUIÉNES SOMOS</a></li>
+                <div class='underbar'></div>
+            </ul>
+        </nav>
+        <span class='dos'>
+            <span class='registro'>
+                <li><a href='/login'>LOGIN</a></li>
+                <li><a href='/registro'>REGISTRO</a></li>
+            </span>
+            <span class='iconos'>
+                <i class='fas fa-search' id='icon-search'></i>
+                <a href='/carrito'><i class='fas fa-shopping-cart'></i></a>
+            </span>
+        </span>
+    </div>
+</header>
+
+<div id='container-search'>
+    <input type='text' id='input-search' placeholder='¿Qué estás buscando?'>
+</div>
+
+<div id='box-search'>
+    <ul>
+        <li><a href='/productos/visores'><span class='iconos'><i class='fas fa-search'></i></span>Visores</a></li>
+        <li><a href='/productos/aplicaciones'><span class='iconos'><i class='fas fa-search'></i></span>Aplicaciones</a></li>
+        <li><a href='/productos/aplicaciones'><span class='iconos'><i class='fas fa-search'></i></span>Juegos</a></li>
+        <li><a href='/carrito'><span class='iconos'><i class='fas fa-search'></i></span>Carrito</a></li>
+        <li><a href='/login'><span class='iconos'><i class='fas fa-search'></i></span>Login</a></li>
+        <li><a href='/registro'><span class='iconos'><i class='fas fa-search'></i></span>Registro</a></li>
+        <li><a href='/perfil'><span class='iconos'><i class='fas fa-search'></i></span>Perfil</a></li>
+        <li><a href='/quienes-somos'><span class='iconos'><i class='fas fa-search'></i></span>Quienes Somos</a></li>
+        <li><a href='/productos/1'><span class='iconos'><i class='fas fa-search'></i></span>Acer OJO 500</a></li>
+        <li><a href='/productos/2'><span class='iconos'><i class='fas fa-search'></i></span>Oculus Rift S</a></li>
+        <li><a href='/productos/3'><span class='iconos'><i class='fas fa-search'></i></span>Samsung Gear VR</a></li>
+        <li><a href='/productos/4'><span class='iconos'><i class='fas fa-search'></i></span>Joystick Oculus Touch</a></li>
+        <li><a href='/productos/5'><span class='iconos'><i class='fas fa-search'></i></span>Astro Bot</a></li>
+    </ul>
+</div>
+
+<div id='cover-container-search'>
+
+</div>"
+
+?>

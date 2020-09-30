@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styleRegister.css">
+    <title>RYZEN | Registro</title>
+</head>
+<body>
+    <!-- Header -->
+    <%- include('partials/headerNavbar') %>
+    <%- include('partials/mobileNavBar') %>
+    <!-- /Header -->
+    
+    <div class="wrap">
+        <% if (typeof errors!= 'undefined') { %>
+        <div class="registerErrors col-12">
+            <p class="errorsTitle col-12"><span style="color: red">X</span> Error al registrar <span style="color: red">X</span></p>
+            <ul>
+                <% for(let i=0; i< errors.length; i++) { %>
+                <div class="errorList col-12">
+                    <li class="errorType">
+                        <%= errors[i].msg %>
+                    </li>
+                </div>
+                <% } %>
+            </ul>
+        </div>
+        <% } %>
+        <div class="form-container">
+            <form action="/registro" method="post" enctype="application/x-www-form-urlencoded">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <label for="name"></label>
+                    <input type="text" placeholder="Nombre" required id="name" name="name" value=''>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <label for="lastname"></label>
+                    <input type="text" placeholder="Apellido" required id="lastname" name="lastname" value=''>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user-tie"></i>
+                    <label for="username"></label>
+                    <input type="text" placeholder="Usuario" required id="username" name="username" value=''>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-birthday-cake"></i>
+                    <label for="edad"></label>
+                    <input type="date" placeholder="Fecha de Nacimiento" required id="birthdate" name="birthdate" value=''>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <label for="email"></label>
+                    <input type="email" placeholder="Email" required id="email" name="email" value=''>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <label for="password"></label>
+                    <input type="password" placeholder="Contraseña" required id="password" name="password" value=''>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Confirmar Contraseña" required id="retype" name="retype" value=''>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <button type="submit">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                </div>
+                <div class="switch-login">
+                   <p>¿Ya tienes una cuenta? <a href="/login"><span>Iniciar Sesión</span></a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="./public/js/js.js"></script>
+    <script src="/js/search.js"></script>
+
+    <script text="text/javascript">
+        var cursor = document.querySelector('.cursor')
+        var cursor2 = document.querySelector('.cursor2')
+
+        document.addEventListener('mousemove', function (e) {
+            cursor.style.cssText = cursor2.style.cssText = 'left: ' + e.clientX + 'px; top: ' + e.clientY + 'px;'
+        })
+    </script>
+
+</body>
+</html>

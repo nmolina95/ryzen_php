@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/d92a2a2802.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styleProfile.css">
+    
+    <title>RYZEN | Perfil</title>
+</head>
+<body>
+    <!-- Header -->
+    <%- include('partials/headerNavBar') %>
+    <%- include('partials/mobileNavBar') %>
+    <!-- /Header -->
+    <div class="profile">
+        <div class="profileContainer">
+            <div class="title container">
+                <h2>Panel de usuario</h2>
+            </div>
+            <div class="options container">
+                <div class="profileData container">
+                    <div class="name">
+                        <p>Seleccione la opción a editar</p>
+                        <span class="noDisplay">Volver</span>
+                    </div>
+                </div>
+                <% if (products.length !== 0) { %>
+                <div class="adminOptions">
+                    <div class="productOptions">
+                        <% for (let i = 0; i < categories.length; i++) { %>
+                            <div class="linksDiv categorieDiv">
+                                <span class="categories" id="categorie<%= parseInt([i]) + 1 %>"><%= categories[i].name %></span><i class="fas fa-arrow-right"></i>
+                            </div>
+                        <% } %>
+                        <% products.forEach((e) => { %>
+                            <div class="linksDiv noDisplay productsJS productCategory<%= e.idCategory %>">
+                                <a href="/productos/editar/<%= e.id %>"><%= e.name %></a><i class="fas fa-arrow-right"></i>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    <%- include('partials/footer') %>
+    <!-- /Footer-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+        <script src="/js/profile.js"></script>
+        <script src="/js/search.js"></script>
+</body>
+</html>
