@@ -473,7 +473,7 @@ div .iconos i{
 .firstContainer{
     background: url('../img/NEWVR00.jpg');
     background-attachment: fixed;
-    background-position: center;
+    /* background-position: center; */
     background-size: cover;
     padding-top: 15px;
 }
