@@ -16,8 +16,133 @@
 <body>
 
     <!-- Header -->
-    <%- include('partials/headerNavbar') %>
-    <%- include('partials/mobileNavBar') %>
+    
+    <header class='desktop-header' id='hero'>
+        <div class='container col-xl-11 cabecera'>
+            <nav class='row navbar navegacion navbar-dark'>
+    
+                <span class='logo'>
+                    <p style='margin-bottom: 0;'><a href='/'>RYZEN</a></p>
+                </span>
+                <ul style='margin-bottom: 0;'>
+                    <li class='nav-item active'><a href='categories-visors.html'>VISORES</a></li>
+                    <li class='nav-item'><a href='/productos/aplicaciones'>APPS Y JUEGOS</a></li>
+                    <li class='nav-item'><a href='about-us.html'>QUIÉNES SOMOS</a></li>
+                    <div class='underbar'></div>
+                </ul>
+            </nav>
+            <span class='dos'>
+                <span class='registro'>
+                    <li><a href='login.html'>LOGIN</a></li>
+                    <li><a href='register.html'>REGISTRO</a></li>
+                </span>
+                <span class='iconos'>
+                    <i class='fas fa-search' id='icon-search'></i>
+                    <a href='shopCart.html'><i class='fas fa-shopping-cart'></i></a>
+                </span>
+            </span>
+        </div>
+    </header>
+    
+    <div id='container-search'>
+        <input type='text' id='input-search' placeholder='¿Qué estás buscando?'>
+    </div>
+    
+    <div id='box-search'>
+        <ul>
+            <li><a href='categories-visors.html'><span class='iconos'><i class='fas fa-search'></i></span>Visores</a></li>
+            <li><a href='/productos/aplicaciones'><span class='iconos'><i class='fas fa-search'></i></span>Aplicaciones</a>
+            </li>
+            <li><a href='/productos/aplicaciones'><span class='iconos'><i class='fas fa-search'></i></span>Juegos</a></li>
+            <li><a href='shopCart.html'><span class='iconos'><i class='fas fa-search'></i></span>Carrito</a></li>
+            <li><a href='login.html'><span class='iconos'><i class='fas fa-search'></i></span>Login</a></li>
+            <li><a href='register.html'><span class='iconos'><i class='fas fa-search'></i></span>Registro</a></li>
+            <li><a href='/perfil'><span class='iconos'><i class='fas fa-search'></i></span>Perfil</a></li>
+            <li><a href='about-us.html'><span class='iconos'><i class='fas fa-search'></i></span>Quienes Somos</a></li>
+            <li><a href='/productos/1'><span class='iconos'><i class='fas fa-search'></i></span>Acer OJO 500</a></li>
+            <li><a href='/productos/2'><span class='iconos'><i class='fas fa-search'></i></span>Oculus Rift S</a></li>
+            <li><a href='/productos/3'><span class='iconos'><i class='fas fa-search'></i></span>Samsung Gear VR</a></li>
+            <li><a href='/productos/4'><span class='iconos'><i class='fas fa-search'></i></span>Joystick Oculus Touch</a>
+            </li>
+            <li><a href='/productos/5'><span class='iconos'><i class='fas fa-search'></i></span>Astro Bot</a></li>
+        </ul>
+    </div>
+    
+    <div id='cover-container-search'>
+    
+    </div>
+    
+    <header class='mobile-header' id='hero'>
+    
+        <nav class='mobileNavbar navbar navbar-expand-lg'>
+            <!-- navbar-light bg-light -->
+            <a class='navbar-brand navLogo' href='/'>RYZEN</a>
+    
+            <span class='iconos' id='iconoMb'>
+                <i class='fas fa-search' id='icon-search-mb'></i>
+            </span>
+    
+            <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent'
+                aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+                <i class='fas fa-bars'></i>
+            </button>
+    
+            <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+                <ul class='navbar-nav mr-auto'>
+                    <li class='nav-items active'>
+                        <i class='fas fa-home'></i><a class='nav-link' href='/'>HOME <span
+                                class='sr-only'>(current)</span></a>
+                    </li>
+                    <li class='nav-items'>
+                        <i class='fas fa-sign-in-alt'></i><a class='nav-link' href='login.html'>LOGIN</a>
+                    </li>
+                    <li class='nav-items'>
+                        <i class='fas fa-user-plus'></i><a class='nav-link' href='register.html'>REGISTRO</a>
+                    </li>
+                    <li class='nav-items'>
+                        <i class='fas fa-vr-cardboard'></i><a class='nav-link' href='categories-visors.html'>VISORES</a>
+                    </li>
+                    <li class='nav-items'>
+                        <i class='fas fa-gamepad'></i><a class='nav-link' href='/productos/aplicaciones'>APPS Y JUEGOS</a>
+                    </li>
+                    <li class='nav-items'>
+                        <i class='fas fa-briefcase'></i><a class='nav-link' href='about-us.html'> QUIÉNES SOMOS</a>
+                    </li>
+                    <li class='nav-items'>
+                        <i class='fas fa-shopping-cart'></i><a class='nav-link' href='shopCart.html'> CARRITO</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id='container-search-mb'>
+        <input type='text' id='input-search-mb' placeholder='¿Qué estás buscando?'>
+    </div>
+    
+    <div id='box-search-mb'>
+        <ul>
+            <li><a href='categories-visors.html'><span class='iconos'><i class='fas fa-search'></i></span>Visores</a></li>
+            <li><a href='/productos/aplicaciones'><span class='iconos'><i class='fas fa-search'></i></span>Aplicaciones</a>
+            </li>
+            <li><a href='/productos/aplicaciones'><span class='iconos'><i class='fas fa-search'></i></span>Juegos</a></li>
+            <li><a href='shopCart.html'><span class='iconos'><i class='fas fa-search'></i></span>Carrito</a></li>
+            <li><a href='login.html'><span class='iconos'><i class='fas fa-search'></i></span>Login</a></li>
+            <li><a href='register.html'><span class='iconos'><i class='fas fa-search'></i></span>Registro</a></li>
+            <li><a href='/perfil'><span class='iconos'><i class='fas fa-search'></i></span>Perfil</a></li>
+            <li><a href='about-us.html'><span class='iconos'><i class='fas fa-search'></i></span>Quienes Somos</a></li>
+            <li><a href='/productos/1'><span class='iconos'><i class='fas fa-search'></i></span>Acer OJO 500</a></li>
+            <li><a href='/productos/2'><span class='iconos'><i class='fas fa-search'></i></span>Oculus Rift S</a></li>
+            <li><a href='/productos/3'><span class='iconos'><i class='fas fa-search'></i></span>Samsung Gear VR</a></li>
+            <li><a href='/productos/4'><span class='iconos'><i class='fas fa-search'></i></span>Joystick Oculus Touch</a>
+            </li>
+            <li><a href='/productos/5'><span class='iconos'><i class='fas fa-search'></i></span>Astro Bot</a></li>
+        </ul>
+    </div>
+    
+    <div id='cover-container-search-mb'>
+    
+    </div>
+    
     <!-- /Header -->
 
     <div class="container carritoBox">
@@ -29,17 +154,16 @@
                         <div class="carritoTitulo col-lg-12">
                             <h2><i class="fas fa-shopping-cart"></i><span>Carrito</span></h2>
                         </div>
-                        <% if (items.length !== 0) { %>
                         <div>
-                        <% items.forEach(item => { %>
                         <div class="carros">
+
                             <div class="prodCarrito col-lg-12">
                                 <div class="imgCarrito col-lg-2">
-                                    <img src="/img/products/<%= item.product.img %>" alt="Producto del carrito">
+                                    <img src="./public/img/products/img-1595930281690.jpg" alt="Producto del carrito">
                                 </div>
                                 <div class="infoProdCarrito">
                                     <div class="wrapperProducto">
-                                        <h3> <%= item.product.name %> </h3>
+                                        <h3>Acer OJO 500</h3>
                                         <form action="/carrito/eliminarItem" method="POST"
                                             enctype="application/x-www-form-urlencoded">
                                             <div class="borrar">
@@ -49,31 +173,52 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <p class="productPrice">Precio: $<%= toThousand(item.price) %></p>
+                                    <p class="productPrice">Precio: $19.999 %></p>
                                     <div class="wrapperCantidad">
                                         <div class="containerCantidad">
                                             <div class="cartQuantity">
-                                                <p class="quantityAmount">Cantidad: <%= item.quantity %></p>
+                                                <p class="quantityAmount">Cantidad: 1</p>
                                             </div>
                                         </div>
                                         <div class="containerPrecio">
-                                            <% if (item.price !== '0') { %>
-                                            <span class="precioCarrito"> $<%= toThousand(item.subTotal) %> </span>
-                                            <%} else { %>
-                                            <span class="precioCarrito" style="color:green; font-size: 2.4rem;">Gratis</span>
-                                            <% } %>
+                                            <span class="precioCarrito"> $19.999 </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="prodCarrito col-lg-12">
+                                <div class="imgCarrito col-lg-2">
+                                    <img src="./public/img/products/img-1595933031500.png" alt="Producto del carrito">
+                                </div>
+                                <div class="infoProdCarrito">
+                                    <div class="wrapperProducto">
+                                        <h3>Oculus Rift S</h3>
+                                        <form action="/carrito/eliminarItem" method="POST" enctype="application/x-www-form-urlencoded">
+                                            <div class="borrar">
+                                                <input type="hidden" name="idUser" value="<%= item.id %>">
+                                                <button type="submit" class="btn btn-outline-danger btn-lg btn-block">Eliminar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <p class="productPrice">Precio: $110.000 %></p>
+                                    <div class="wrapperCantidad">
+                                        <div class="containerCantidad">
+                                            <div class="cartQuantity">
+                                                <p class="quantityAmount">Cantidad: 2</p>
+                                            </div>
+                                        </div>
+                                        <div class="containerPrecio">
+                                            <span class="precioCarrito"> $220.000 </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                        <% })} else { %>
-                            <p class="noCart">Aún no agregaste artículos al carrito.</p>
-                        <% } %>
                         </div>
-                        <% if (items.length !== 0) { %>
                         <div class="totalCompra">
-                            <h3>TOTAL: <span>$<%= toThousand(total) %></span></h3>
+                            <h3>TOTAL: <span>$239.999</span></h3>
                         </div>
                         <div class="botonesCarrito">
                             <form action="/carrito/comprar" method="POST" enctype="application/x-www-form-urlencoded">
@@ -84,7 +229,6 @@
                             </div>
                             </form>
                         </div>
-                        <% } %>
                     </div>
                 </section>
             </div>
@@ -104,7 +248,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <script src="./public/js/js.js"></script>
-    <script src="/js/search.js"></script>
+    <script src="./public/js/search.js"></script>
 
 </body>
 

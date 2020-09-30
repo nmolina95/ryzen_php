@@ -415,7 +415,7 @@ form{
     background: rgba(255,255,255,0.5);
     border-radius: 20px;
     box-shadow: 0 1px 1.5rem rgba(0, 0, 0, 0.1);
-    margin-top: 2%;
+    margin-top: 4%;
 }
 
 /* Cantidad de campos a ingresar */
@@ -574,5 +574,8 @@ form{
     }
     .desktop-header{
         display: none!important;
+    }
+    form {
+        margin-top: 5%;
     }
 }
