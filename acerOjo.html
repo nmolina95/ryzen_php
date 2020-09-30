@@ -173,10 +173,8 @@
                                 <div class="botones">
                                     <p class="precio">$19.999</p>
                                     <div class="buttonsDiv">
-                                        <% if (locals.user.rol == 10) { %>
                                         <a href="/productos/editar/<%= producto.id %>"><button type="button" class="btn btn-outline-success btn-lg editButton">Editar</button></a>
                                         <input type="hidden" name="productId" value="<%= producto.id %>">
-                                        <% } %>
                                         <button type="submit" class="btn btn-outline-warning btn-lg cartButton">Agregar al carrito</button>
                                     </div>
                                 </div>
