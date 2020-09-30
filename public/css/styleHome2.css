@@ -709,6 +709,10 @@ div .iconos i{
     align-content: center;
 }
 
+.btn-mf button{
+    width: 100%;
+}
+
 .btn-mi{
     font-size: 1.8rem;
     background: white;
