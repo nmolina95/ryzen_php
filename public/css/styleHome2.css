@@ -752,7 +752,7 @@ div .iconos i{
         font-size: 3rem;
     }
     .carouselContainer .subH2{
-        font-size: 19px;
+        font-size: 23px;
     }
 }
 
@@ -782,6 +782,9 @@ div .iconos i{
         display: block;
         align-items: center;
     }
+    .carouselContainer .subH2 {
+        font-size: 28px;
+    }
 }
 
 @media (min-width: 425px){
@@ -789,7 +792,7 @@ div .iconos i{
         font-size: 3rem;
     }
     .carouselContainer .subH2{
-        font-size: 26px;
+        font-size: 30px;
     }
 }
 
@@ -806,8 +809,11 @@ div .iconos i{
     .logo{
         margin-right: 3.7rem;
     }
+    .subH2 {
+    font-size: 4rem;
+    }
     .carouselContainer .subH2{
-        font-size: 30px;
+        font-size: 40px;
     }
 }
 
