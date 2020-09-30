@@ -1,4 +1,4 @@
-<!-- Adaptación del proyecto a sitio estático HTML para poder compartirlo en un servidor. No es posible registrarse, hacer un login o una compra, pero si acceder a las distintas secciones. -->
+/ Adaptación del proyecto a sitio estático HTML para poder compartirlo en un servidor. No es posible registrarse, hacer un login o una compra, pero si acceder a las distintas secciones. /
 
 En nuestro proyecto integrador estaremos armando un ecommerce de artículos con la temática 
 realidad virtual. En el mismo ofreceremos desde el mismo casco/consola que se necesita para
