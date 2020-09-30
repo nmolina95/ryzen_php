@@ -1,6 +1,4 @@
-<?php
-
-echo "<header class='mobile-header' id='hero'>
+<header class='mobile-header' id='hero'>
     
     <nav class='mobileNavbar navbar navbar-expand-lg'>
         <!-- navbar-light bg-light -->
@@ -20,21 +18,12 @@ echo "<header class='mobile-header' id='hero'>
                 <li class='nav-items active'>
                     <i class='fas fa-home'></i><a class='nav-link' href='/'>HOME <span class='sr-only'>(current)</span></a>
                 </li>
-                <% if(locals.user){ %>
-                <li class='nav-items'>
-                    <i class='fas fa-user'></i><a class='nav-link userLogged' href='/perfil'>¡Hola <%= locals.user.userName %>!</a>
-                </li>
-                <li class='nav-items'>
-                    <i class='fas fa-times-circle'></i><a class='nav-link' href='/logout' style='color: #ff0d0d;'>LOGOUT</a>
-                </li>
-                <% } else { %>
                 <li class='nav-items'>
                     <i class='fas fa-sign-in-alt'></i><a class='nav-link' href='/login'>LOGIN</a>
                 </li>
                 <li class='nav-items'>
                     <i class='fas fa-user-plus'></i><a class='nav-link' href='/registro'>REGISTRO</a>
                 </li>
-                <% } %>
                 <li class='nav-items'>
                     <i class='fas fa-vr-cardboard'></i><a class='nav-link' href='/productos/visores'>VISORES</a>
                 </li>
@@ -75,6 +64,4 @@ echo "<header class='mobile-header' id='hero'>
 
 <div id='cover-container-search-mb'>
 
-</div>"
-
-?>
+</div>
