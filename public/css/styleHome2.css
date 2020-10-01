@@ -864,9 +864,9 @@ div .iconos i{
 }
 
 @media (min-width: 992px){
-    /* .firstContainer{
+    .firstContainer{
         background-position: unset;
-    } */
+    }
     .firstContainerRow{
         display: flex;
         flex-direction: initial;
