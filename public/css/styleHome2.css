@@ -459,8 +459,8 @@ div .iconos i{
 .tamano-container {
     background-color: white;
     border-radius: 20px;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
+    /* margin-bottom: 20px;
+    padding-bottom: 15px; */
     color: black;
     max-width: 100%;
     border-radius: 0px;
