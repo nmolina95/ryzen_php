@@ -552,7 +552,14 @@ div .iconos i{
     display: flex;
     flex-wrap: wrap;
 }
-
+.secondImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.secondImage img{
+    width: 100%;
+}
 .producto-home-nom {
     text-align: right;
     font-size: 4rem; 
