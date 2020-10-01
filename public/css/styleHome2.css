@@ -801,7 +801,7 @@ div .iconos i{
     .firstContainer{
         background: url('../img/NEWVR02.png');
         background-size: cover;
-        background-position: unset;
+        background-position: center;
         background-attachment: fixed;
     }
     .carouselIndex{
