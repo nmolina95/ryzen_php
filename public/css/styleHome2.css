@@ -459,8 +459,8 @@ div .iconos i{
 .tamano-container {
     background-color: white;
     border-radius: 20px;
-    /* margin-bottom: 20px;
-    padding-bottom: 15px; */
+    margin-bottom: 20px;
+    padding-bottom: 15px;
     color: black;
     max-width: 100%;
     border-radius: 0px;
@@ -798,6 +798,12 @@ div .iconos i{
 }
 
 @media (max-width: 450px){
+    .firstContainer{
+        background: url('../img/NEWVR01.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
     .carouselIndex{
         width: 90vw;
     }
