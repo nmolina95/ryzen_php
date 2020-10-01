@@ -799,9 +799,9 @@ div .iconos i{
 
 @media (max-width: 450px){
     .firstContainer{
-        background: url('../img/NEWVR01.png');
+        background: url('../img/NEWVR02.png');
         background-size: cover;
-        background-position: center;
+        background-position: unset;
         background-attachment: fixed;
     }
     .carouselIndex{
@@ -857,9 +857,9 @@ div .iconos i{
 }
 
 @media (min-width: 992px){
-    .firstContainer{
+    /* .firstContainer{
         background-position: unset;
-    }
+    } */
     .firstContainerRow{
         display: flex;
         flex-direction: initial;
