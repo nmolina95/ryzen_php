@@ -473,7 +473,7 @@ div .iconos i{
 .firstContainer{
     background: url('../img/NEWVR00.jpg');
     background-attachment: fixed;
-    /* background-position: center; */
+    background-position: center;
     background-size: cover;
     padding-top: 15px;
 }
@@ -619,8 +619,7 @@ div .iconos i{
 }
 
 .carouselContainer{
-    /* background: url('../img/background2.jpg'); */
-    background: #f22f25;
+    background: url('https://fondosmil.com/fondo/504.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -661,7 +660,9 @@ div .iconos i{
 .carousel-caption{
     margin-top: 60px;
 }
-
+.compatibleContainer .subH2{
+    opacity: 0.7;
+}
 .subH2 {
     font-size: 3.7rem;
     text-align: center;
@@ -712,7 +713,7 @@ div .iconos i{
 }
 
 .btn-mf button{
-    width: 100%;
+    width: 70%;
 }
 
 .btn-mi{
@@ -721,13 +722,13 @@ div .iconos i{
     color: black;
     font-weight: bold;
     border: 1px solid black;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .btn-mi:hover{
     background: black;
     color: white;
-    border: 1px solid black;
+    border: 1px solid white;
     transition: all 0.3s ease 0s;
 }
 
@@ -846,6 +847,9 @@ div .iconos i{
 }
 
 @media (min-width: 992px){
+    .firstContainer{
+        background-position: unset;
+    }
     .firstContainerRow{
         display: flex;
         flex-direction: initial;
